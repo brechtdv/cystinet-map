@@ -3,14 +3,13 @@
 
 ## required packages
 library(bd)
-library(readxl)
 library(leaflet)
 library(htmltools)
 library(htmlwidgets)
 library(magrittr)
 
 ## read data
-x <- read_excel("labs.xlsx", 1)
+x <- readxl("labs.xlsx")
 
 ## sanitize special characters
 x$LAB <- sanitize_specials(x$LAB, "html")
